@@ -13,35 +13,35 @@ dispTime();
 
 function getHtml() {
   var path = window.location.pathname;
-  if (path == "/pset0.html") {
+  if (path == "/started/pset0.html") {
     data.since = 1586092440000,  // Epoch timestamp, since April 5, 2020 8:14:00 PM
     data.until = 1586092440000   // Epoch timestamp, until April 5, 2020 8:14:00 PM
   }
-  else if (path == "/pset1.html") {
+  else if (path == "/started/pset1.html") {
     data.since = 1586092440000, // Epoch timestamp, since April 5, 2020 8:14:00 PM
     data.until = 1586079724000  // Epoch timestamp, until April 5, 2020 9:42:04 PM
   }
-  else if (path == "/pset2.html") {
+  else if (path == "/started/pset2.html") {
     data.since = 1586079724000, // Epoch timestamp, since April 5, 2020 9:42:04 PM
     data.until = 1586220147000  // Epoch timestamp, until April 7, 2020 12:42:27 AM
   }
-  else if (path == "/pset3.html") {
+  else if (path == "/started/pset3.html") {
     data.since = 1586220147000  // Epoch timestamp, since April 7, 2020 12:42:27 AM
     data.until = 1586890018000  // Epoch timestamp, until April 14, 2020 6:46:58 PM
   }
-  else if (path == "/pset4.html") {
+  else if (path == "/started/pset4.html") {
     data.since = 1586890018000, // Epoch timestamp, since April 14, 2020 6:46:58 PM
     data.until = 1587233006000  // Epoch timestamp, until April 18, 2020 6:03:26 PM
   }
-  else if (path == "/pset5.html") {
+  else if (path == "/started/pset5.html") {
     data.since = 1587233006000  // Epoch timestamp, since April 18, 2020 6:03:26 PM
     data.until = 1587719244000  // Epoch timestamp, until April 24, 2020 9:07:24 AM
   }
-  else if (path == "/pset6.html") {
+  else if (path == "/started/pset6.html") {
     data.since = 1587719244000, // Epoch timestamp, since April 24, 2020 9:07:24 AM
     data.until = 1587905990000  // Epoch timestamp, until April 26, 2020 12:59:50 PM
   }
-  else if (path == "/pset7.html") {
+  else if (path == "/started/pset7.html") {
     data.since = 1587905990000  // Epoch timestamp, since April 26, 2020 12:59:50 PM
     data.until = 1588100497000  // Epoch timestamp, until April 28, 2020 7:01:37 PM
   }
