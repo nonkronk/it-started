@@ -64,19 +64,20 @@ header p {
     background-color: black;
 }
 
-/*  In paragraph links in black */
+/*  black text In harvard-red */
 p a {
     color: black;
 }
 
-/*  In h3 links in harvard-red */
+/*  harvard-red h3 text in black */
 h3 a {
     color: #a51c30;
 }
 
-/*  CS50x harvard-red */
+/*  harvard-red span text in black */
 span a {
     color: #a51c30;
+    text-decoration: none;
 }
 
 /*  links hover color */

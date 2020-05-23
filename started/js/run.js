@@ -10,11 +10,12 @@ const data = {
 getHtml();
 calcTime();
 dispTime();
+updatePies()
 
 function getHtml() {
   var path = window.location.pathname;
   if (path == "/started/pset0.html") {
-    data.since = 1586092440000,  // Epoch timestamp, since April 5, 2020 8:14:00 PM
+    data.since = 1586101016000,  // Epoch timestamp, since April 5, 2020 3:36:56 PM
     data.until = 1586092440000   // Epoch timestamp, until April 5, 2020 8:14:00 PM
   }
   else if (path == "/started/pset1.html") {
@@ -66,3 +67,28 @@ function dispTime() {
     progres.querySelector("h2").innerText = v;
   });
 } 
+
+function updatePies() {
+  const progresses = document.querySelectorAll(".progres[fraction]");
+  const radius = 25;
+  const circumference = radius * 2 * Math.PI;
+  progresses.forEach(progres => {
+    const value = data[progres.getAttribute("fraction")];
+    const complete = Math.floor(value);
+    const percent = Math.round((value - complete) * 100 * 10) / 10;
+    const offset = circumference - (percent / 100) * circumference;
+    progres.querySelector(
+      ".left"
+    ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 100 100">
+    <circle class="bg" r="${radius}" cx="50" cy="50" />
+    <circle
+      class="prog"
+      r="${radius}"
+      cx="50"
+      cy="50"
+      stroke-dasharray="${circumference} ${circumference}"
+      stroke-dashoffset="${offset}"
+    />
+  </svg>`;
+  });
+}
