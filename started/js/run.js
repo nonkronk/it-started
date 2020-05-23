@@ -9,8 +9,7 @@ const data = {
 
 getHtml();
 calcTime();
-dispTime();
-updatePies()
+showTime()
 
 function getHtml() {
   var path = window.location.pathname;
@@ -56,8 +55,10 @@ function calcTime() {
   data.seconds = seconds;  
 }
 
-function dispTime() {
+function showTime() {
   const progresses = document.querySelectorAll(".progres[fraction]");
+  const radius = 25;
+  const circumference = radius * 2 * Math.PI;
   progresses.forEach(progres => {
     const value = data[progres.getAttribute("fraction")];
     const complete = Math.floor(value);
@@ -65,16 +66,6 @@ function dispTime() {
     if (complete < 10) v = value.toFixed(2).replace(".", ",");
     if (complete < 1) v = value.toFixed(3).replace(".", ",");
     progres.querySelector("h2").innerText = v;
-  });
-} 
-
-function updatePies() {
-  const progresses = document.querySelectorAll(".progres[fraction]");
-  const radius = 25;
-  const circumference = radius * 2 * Math.PI;
-  progresses.forEach(progres => {
-    const value = data[progres.getAttribute("fraction")];
-    const complete = Math.floor(value);
     const percent = Math.round((value - complete) * 100 * 10) / 10;
     const offset = circumference - (percent / 100) * circumference;
     progres.querySelector(
