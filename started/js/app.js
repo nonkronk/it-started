@@ -6,7 +6,7 @@ const data = {
   hours: null,
   minutes: null,
   seconds: null,
-  time: 1586092440000 // Epoch timestamp, since April 5, 2020 8:14 PM WIB
+  time: 1586101016000 // Epoch timestamp, since April 5, 2020 3:36:56 PM
 };
 
 const progresses = document.querySelectorAll(".progres[fraction]");
