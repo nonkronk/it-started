@@ -2,3 +2,4 @@
 /started/*	https://itstarted.netlify.app/:splat	200
 /stopped/    https://stopped.netlify.app 200
 https://itstarted.netlify.app    https://irvantristian.com/started/    301!
+https://stopped.netlify.app    https://irvantristian.com/stopped/    301!
